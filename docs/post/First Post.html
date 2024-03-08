@@ -75,8 +75,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">comments</button>
 <div class="comments" id="comments"></div>
 </div>
-    <div id="footer">Copyright © <span id="year"></span><a href="https://nganun.github.io"> Nganun </a>
-<p><a href="https://beian.miit.gov.cn/" target="_blank">Less is More</a>
+    <div id="footer">Copyright © <span id="year"></span><a href="https://nganun.github.io"> Meekdai </a>
+<p>
 <span id="runday"></span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a>
 </p>
 
@@ -87,7 +87,7 @@ if("03/08/2024"!=""){
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
     document.getElementById("year").innerHTML=now.getFullYear();
-    if("Less is More"!=""){document.getElementById("runday").innerHTML=" • "+"run "+diffDay+" days"+" • ";}
+    if(""!=""){document.getElementById("runday").innerHTML=" • "+"run "+diffDay+" days"+" • ";}
     else{document.getElementById("runday").innerHTML="run "+diffDay+" days"+" • ";}
 }
 </script>
