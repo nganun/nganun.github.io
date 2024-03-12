@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Meekdai</title><link>https://nganun.github.io</link><description>身識志趣，律罰省望</description><copyright>Meekdai</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/92292545?v=4</url><title>avatar</title><link>https://nganun.github.io</link></image><lastBuildDate>Tue, 12 Mar 2024 01:50:15 +0000</lastBuildDate><managingEditor>Meekdai</managingEditor><ttl>60</ttl><webMaster>Meekdai</webMaster><item><title>Blogging with github action and gh</title><link>https://nganun.github.io/post/Blogging%20with%20github%20action%20and%20gh.html</link><description># How to post with gh&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Meekdai</title><link>https://nganun.github.io</link><description>身識志趣，律罰省望</description><copyright>Meekdai</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/92292545?v=4</url><title>avatar</title><link>https://nganun.github.io</link></image><lastBuildDate>Tue, 12 Mar 2024 01:57:13 +0000</lastBuildDate><managingEditor>Meekdai</managingEditor><ttl>60</ttl><webMaster>Meekdai</webMaster><item><title>Blogging with github action and gh</title><link>https://nganun.github.io/post/Blogging%20with%20github%20action%20and%20gh.html</link><description># How to post with gh&#13;
 &#13;
 &gt; Purpose&#13;
 &gt; Record the post method&#13;
@@ -44,6 +44,13 @@ gh issue delete 5&#13;
 &#13;
 ```sh&#13;
 gh label create name&#13;
+```&#13;
+&#13;
+## Invoke Actions&#13;
+&#13;
+```gh&#13;
+# Invoke actions with interactive&#13;
+gh workflow run&#13;
 ```&#13;
 &#13;
 。</description><guid isPermaLink="true">https://nganun.github.io/post/Blogging%20with%20github%20action%20and%20gh.html</guid><pubDate>Tue, 12 Mar 2024 01:43:55 +0000</pubDate></item><item><title>Professional JavaScript for Web Developers, 4th Endition</title><link>https://nganun.github.io/post/Professional%20JavaScript%20for%20Web%20Developers%2C%204th%20Endition.html</link><description># Professional JavaScript for Web Developers, 4th Endition&#13;

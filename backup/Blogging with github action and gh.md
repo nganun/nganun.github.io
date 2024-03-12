@@ -45,3 +45,10 @@ gh issue delete 5
 gh label create name
 ```
 
+## Invoke Actions
+
+```gh
+# Invoke actions with interactive
+gh workflow run
+```
+
