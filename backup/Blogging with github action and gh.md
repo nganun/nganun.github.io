@@ -50,5 +50,7 @@ gh label create name
 ```gh
 # Invoke actions with interactive
 gh workflow run
+# Show the action status
+gh run list --workflow=Gmeek.yml
 ```
 
