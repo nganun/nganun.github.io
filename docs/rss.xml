@@ -1,5 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>NGANUN</title><link>https://nganun.github.io</link><description>Less is More</description><copyright>NGANUN</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/92292545?v=4</url><title>avatar</title><link>https://nganun.github.io</link></image><lastBuildDate>Tue, 12 Mar 2024 02:09:13 +0000</lastBuildDate><managingEditor>NGANUN</managingEditor><ttl>60</ttl><webMaster>NGANUN</webMaster><item><title>Blogging with github action and gh</title><link>https://nganun.github.io/post/Blogging%20with%20github%20action%20and%20gh.html</link><description># How to post with gh&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>NGANUN</title><link>https://nganun.github.io</link><description>Less is More</description><copyright>NGANUN</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/92292545?v=4</url><title>avatar</title><link>https://nganun.github.io</link></image><lastBuildDate>Mon, 01 Apr 2024 05:12:24 +0000</lastBuildDate><managingEditor>NGANUN</managingEditor><ttl>60</ttl><webMaster>NGANUN</webMaster><item><title>Tools - Less is MOre</title><link>https://nganun.github.io/post/Tools%20-%20Less%20is%20MOre.html</link><description>## Concept&#13;
+&#13;
+1. Less is More&#13;
+2. Start with less, give it time, have fun&#13;
+&#13;
+## Tool List&#13;
+&#13;
+**File Manager**&#13;
+&#13;
+- yazi&#13;
+&#13;
+**Editor**&#13;
+&#13;
+- lazyvim&#13;
+- vscode&#13;
+&#13;
+**Terminal**&#13;
+&#13;
+- zsh (linux)&#13;
+- powershell (windows)&#13;
+&#13;
+。</description><guid isPermaLink="true">https://nganun.github.io/post/Tools%20-%20Less%20is%20MOre.html</guid><pubDate>Mon, 01 Apr 2024 05:11:55 +0000</pubDate></item><item><title>Blogging with github action and gh</title><link>https://nganun.github.io/post/Blogging%20with%20github%20action%20and%20gh.html</link><description># How to post with gh&#13;
 &#13;
 &gt; Purpose&#13;
 &gt; Record the post method&#13;
