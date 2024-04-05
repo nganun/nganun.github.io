@@ -1,30 +1,18 @@
-## 第 3 章 語言基礎
+## 第一部分 JavaScript 编程语言
 
-### 3.1 語法
+### 02 JavaScript 基础知识
 
-- 區分大小寫
-- 標識符
-- 註釋
-- 嚴格模式
-- 語句
+- <script> 标签
+  - 使用独立文件的好处是浏览器会下载它，然后将它保存到浏览器的缓存中
+  - 如果设置了 src 属性，script 标签内的内容将被忽略
 
-### 3.2 關鍵字與保留字
+> 代码结构
 
-### 3.3 變量
-
-- var 關鍵字
-- let 聲明
-- const 聲明
-- 聲明風格與最佳實踐
-
-### 3.4 數據類型
-
-- typeof 操作符
-- Undefined 類型
-- Null 類型
-- Boolean 類型
-- Number 類型
-- String 類型
-- Symbol 類型
-- Object 類型
+- 语句
+- 分号
+  错误例子
+  alert("hello")
+[1,2].forEach(alert);
+- 注释
+- 
 
