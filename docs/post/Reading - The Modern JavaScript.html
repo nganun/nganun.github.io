@@ -148,7 +148,52 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-c">// 显示一个带有 question 以及确定和取消按钮的窗口，确定返回 true，取消取回 false</span>
 <span class="pl-k">let</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">confirm</span><span class="pl-kos">(</span><span class="pl-s1">question</span><span class="pl-kos">)</span>
 
-<span class="pl-s1">这些方法是模态的：它们暂停脚本的执行，并且不允许用户与该页面的其余部分进行交互，直到窗口被解除。</span></pre></div></div>
+<span class="pl-s1">这些方法是模态的：它们暂停脚本的执行，并且不允许用户与该页面的其余部分进行交互，直到窗口被解除。</span></pre></div>
+<h3>类型转换</h3>
+<blockquote>
+<p>字符串转换</p>
+</blockquote>
+<ul>
+<li>显示调用 String(value)，false 变成 "false"，null 变成 "null"</li>
+<li>alert(value) 会直接将 value 转变为字符串</li>
+</ul>
+<blockquote>
+<p>数字型转换</p>
+</blockquote>
+<ul>
+<li>在算术函数和表达式中，会自动进行 number 类型转换。比如 <code class="notranslate">alert("6" / "2")</code> 结果为 3</li>
+<li>显示调用 Number(value)。 如果 value 不是一个有效的数字，转换结果为 NaN。如 <code class="notranslate">alert(Number("Hello"))</code></li>
+<li>转换规则</li>
+</ul>
+<table role="table">
+<thead>
+<tr>
+<th>值</th>
+<th>变成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>null</td>
+<td>0</td>
+</tr>
+<tr>
+<td>true 和 false</td>
+<td>1 and 0</td>
+</tr>
+<tr>
+<td>string</td>
+<td>去掉首尾空白字符（空格、换行符、制表符等）后的纯数字字符串中含有的数字。如果剩余字符串为空，结果为0。否则，将从剩余字符串中读取数字。当类型转换出现 error 时返回 NaN</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>布尔类型转换</p>
+</blockquote></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

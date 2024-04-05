@@ -79,4 +79,31 @@ let result = confirm(question)
 
 ```
 
+### 类型转换
+
+> 字符串转换
+
+- 显示调用 String(value)，false 变成 "false"，null 变成 "null"
+- alert(value) 会直接将 value 转变为字符串
+
+> 数字型转换
+
+- 在算术函数和表达式中，会自动进行 number 类型转换。比如 `alert("6" / "2")` 结果为 3
+- 显示调用 Number(value)。 如果 value 不是一个有效的数字，转换结果为 NaN。如 `alert(Number("Hello"))`
+- 转换规则
+
+| 值   | 变成    |
+|--------------- | --------------- |
+| undefined   | NaN   |
+| null   | 0   |
+| true 和 false   | 1 and 0   |
+| string   | 去掉首尾空白字符（空格、换行符、制表符等）后的纯数字字符串中含有的数字。如果剩余字符串为空，结果为0。否则，将从剩余字符串中读取数字。当类型转换出现 error 时返回 NaN   |
+
+> 布尔类型转换
+
+
+
+
+
+
 
