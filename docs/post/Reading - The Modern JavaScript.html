@@ -68,17 +68,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><h2>第一部分 JavaScript 编程语言</h2>
-<h3>02 JavaScript 基础知识</h3>
-<blockquote>
-<p><code class="notranslate">&lt;script&gt;</code> 标签</p>
-</blockquote>
+<h2>02 JavaScript 基础知识</h2>
+<h3><code class="notranslate">&lt;script&gt;</code> 标签</h3>
 <ul>
 <li>使用独立文件的好处是浏览器会下载它，然后将它保存到浏览器的缓存中</li>
 <li>如果设置了 src 属性，script 标签内的内容将被忽略</li>
 </ul>
-<blockquote>
-<p>代码结构</p>
-</blockquote>
+<h3>代码结构</h3>
 <ul>
 <li>语句</li>
 <li>分号
@@ -90,17 +86,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </li>
 <li>注释</li>
 </ul>
-<blockquote>
-<p><code class="notranslate">"use strict"</code> 模式</p>
-</blockquote>
+<h3><code class="notranslate">"use strict"</code> 模式</h3>
 <ul>
 <li>请确保<code class="notranslate">"use strict"</code> 出现在脚本的最顶部，否则严格模式可能均未启用。只有注释可以出现在 <code class="notranslate">"use strict"</code> 的上面</li>
 <li>开发者控制台默认不启动 <code class="notranslate">"use strict"</code></li>
 <li>现代 JavaScript 支持 <code class="notranslate">class</code> 和 <code class="notranslate">module</code>，它们会默认启用 <code class="notranslate">use strict</code></li>
 </ul>
-<blockquote>
-<p>变量</p>
-</blockquote>
+<h3>变量</h3>
 <ul>
 <li>变量声明、变量赋值</li>
 <li><code class="notranslate">let</code>, <code class="notranslate">const</code>, <code class="notranslate">var</code></li>
@@ -108,9 +100,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>保留字</li>
 <li>常量</li>
 </ul>
-<blockquote>
-<p>数据类型</p>
-</blockquote>
+<h3>数据类型</h3>
 <ul>
 <li>动态类型：定义后的变量，并不会被限制为某一固定类型</li>
 <li>8 种基本数据类型（7 和原始类型 + 1 种引用类型）
@@ -148,7 +138,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">typeof</span> <span class="pl-v">Symbol</span><span class="pl-kos">(</span><span class="pl-s">'id'</span><span class="pl-kos">)</span> <span class="pl-c">// "symbol"</span>
 <span class="pl-k">typeof</span> <span class="pl-v">Math</span>       <span class="pl-c">// "object"</span>
 <span class="pl-k">typeof</span> <span class="pl-c1">null</span>       <span class="pl-c">// "object"</span>
-<span class="pl-k">typeof</span> <span class="pl-s1">alert</span>      <span class="pl-c">// "function"</span></pre></div></div>
+<span class="pl-k">typeof</span> <span class="pl-s1">alert</span>      <span class="pl-c">// "function"</span></pre></div>
+<h3>交互：alert, prompt, confirm</h3>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 显示一条信息，并等待用户按下 "OK"</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s">'Hello'</span><span class="pl-kos">)</span>
+<span class="pl-c">// 显示一个带有文本消息的窗口，还有 input 框和确定取消按钮。取消返回 null</span>
+<span class="pl-c">// title 显示组用户的文件，default 可选的第二个参数，指定 input 的初始值</span>
+<span class="pl-k">let</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">prompt</span><span class="pl-kos">(</span><span class="pl-s1">title</span><span class="pl-kos">,</span> <span class="pl-kos">[</span><span class="pl-s1">defult</span><span class="pl-kos">]</span><span class="pl-kos">)</span>
+<span class="pl-c">// 显示一个带有 question 以及确定和取消按钮的窗口，确定返回 true，取消取回 false</span>
+<span class="pl-k">let</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">confirm</span><span class="pl-kos">(</span><span class="pl-s1">question</span><span class="pl-kos">)</span>
+
+<span class="pl-s1">这些方法是模态的：它们暂停脚本的执行，并且不允许用户与该页面的其余部分进行交互，直到窗口被解除。</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
