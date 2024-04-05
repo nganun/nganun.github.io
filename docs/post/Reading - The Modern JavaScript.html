@@ -187,12 +187,180 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 <tr>
 <td>string</td>
-<td>去掉首尾空白字符（空格、换行符、制表符等）后的纯数字字符串中含有的数字。如果剩余字符串为空，结果为0。否则，将从剩余字符串中读取数字。当类型转换出现 error 时返回 NaN</td>
+<td>读取字符串，两端的空白字符（空格，换行符 \n，制表符 \t 等）会被忽略。空字符串变成 0。转换出错则输出 NaN</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <p>布尔类型转换</p>
+</blockquote>
+<ul>
+<li>它发生在逻辑运算中，也可以通过显示调用 Boolean(value) 来进行转换</li>
+<li>转换规则如下
+<ul>
+<li>直观上为空值（如0，空字符串，null，undefined, 和 NaN）将变为 false</li>
+<li>其它值变成 true</li>
+</ul>
+</li>
+</ul>
+<h3>基础运算符，数学运算</h3>
+<ul>
+<li>运算元：运算符应用的对象。比如 5 * 2，有两个运算元。如果一个运算符对应的只有一个运算元，那么它是一个一元运算符。</li>
+</ul>
+<blockquote>
+<p>数学运算符</p>
+</blockquote>
+<p><code class="notranslate">+, -, *, /, 取余 %, 示幂 **</code></p>
+<blockquote>
+<p>连接字符串，二元运算符 +</p>
+</blockquote>
+<ul>
+<li>只要任意一个运算元是字符串，那么另一个运算元也将被转化为字符串</li>
+<li>二元 + 是支持字符串的运算符。其它算术运算符只对数字起作用，并且总是将其它运算元转换为数字。</li>
+<li>例子
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-c1">2</span> <span class="pl-c1">+</span> <span class="pl-c1">2</span> <span class="pl-c1">+</span> <span class="pl-s">'1'</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// '41'，不是 '221'</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s">'1'</span> <span class="pl-c1">+</span> <span class="pl-c1">2</span> <span class="pl-c1">+</span> <span class="pl-c1">2</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// '122'，不是 '14'</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-c1">6</span> <span class="pl-c1">-</span> <span class="pl-s">'2'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>     <span class="pl-c">// 4</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s">'6'</span> <span class="pl-c1">/</span> <span class="pl-s">'2'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>   <span class="pl-c">// 3</span></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>数字转化，一元运算符 +</p>
+</blockquote>
+<p>+value, 放在值的前面，与 Number(value) 相同</p>
+<blockquote>
+<p>运算符优先级</p>
+</blockquote>
+<ul>
+<li>一元运算符优先级高于二元运算符</li>
+</ul>
+<blockquote>
+<p>赋值运算符</p>
+</blockquote>
+<ul>
+<li>链式赋值（chaining assignments)
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">;</span>
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-c1">2</span> <span class="pl-c1">+</span> <span class="pl-c1">2</span><span class="pl-kos">;</span></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>自增/自减</p>
+</blockquote>
+<ul>
+<li>后置模式：运算符置于变量后</li>
+<li>前置模式：运算符置于变量前</li>
+<li>++/-- 优先级比大多数算数运算符都要高</li>
+</ul>
+<blockquote>
+<p>位运算符</p>
+</blockquote>
+<ul>
+<li>位运算符把运算元当作 32 位整数，并在它们的二进制表现形式上操作。</li>
+<li>按位与 ( &amp; )</li>
+<li>按位或 ( | )</li>
+<li>按位异或 ( ^ )</li>
+<li>按位非 ( ~ )</li>
+<li>左移 ( &lt;&lt; )</li>
+<li>右移 ( &gt;&gt; )</li>
+<li>无符号右移 ( &gt;&gt;&gt; )</li>
+</ul>
+<blockquote>
+<p>逗号运算符</p>
+</blockquote>
+<ul>
+<li>逗号运算符能让我们处理多个表达式，使用 , 将它们分开。每个表达式都运行了，但是只有最后一个的结果会被返回。
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-kos">(</span><span class="pl-c1">1</span> <span class="pl-c1">+</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">3</span> <span class="pl-c1">+</span> <span class="pl-c1">4</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span><span class="pl-kos">;</span>   <span class="pl-c">// 7, (3 + 4 的结果)</span>
+<span class="pl-c">// 一行上有三个运算符</span>
+<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">3</span><span class="pl-kos">,</span> <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-s1">a</span> <span class="pl-c1">*</span> <span class="pl-s1">b</span><span class="pl-kos">;</span> <span class="pl-s1">a</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">10</span><span class="pl-kos">;</span> <span class="pl-s1">a</span><span class="pl-c1">++</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+...
+<span class="pl-kos">}</span></pre></div>
+</li>
+</ul>
+<h3>值的比较</h3>
+<blockquote>
+<p>字符串比较</p>
+</blockquote>
+<ul>
+<li>在比较字符串大小时，JavaScript 会使用字典（dictionary）或词典(lexicographical) 顺序进行判定</li>
+<li>字符串比较（首位字符大小；如果前几位相等，还有未比较字符的字符串更大）</li>
+</ul>
+<blockquote>
+<p>不同类型间的比较</p>
+</blockquote>
+<ul>
+<li>当对不同类型的值进行比较时，JavaScript 会首先将其转化为数字再判定大小</li>
+<li>对于布尔类型，true 会被转化为 1, false 会被转化为 0</li>
+<li>奇怪的现象
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span><span class="pl-kos">;</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-v">Boolean</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// false</span>
+<span class="pl-k">let</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-s">"0"</span><span class="pl-kos">;</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-v">Boolean</span><span class="pl-kos">(</span><span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// true</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s1">a</span> <span class="pl-c1">==</span> <span class="pl-s1">b</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// true!</span></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>严格相等</p>
+</blockquote>
+<ul>
+<li>严格相等运算符 <code class="notranslate">===</code> 在进行比较时不会做任何的类型转换</li>
+</ul>
+<blockquote>
+<p>对 <code class="notranslate">null</code> 和 <code class="notranslate">undefinec</code> 进行比较</p>
+</blockquote>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c1">null</span> <span class="pl-c1">==</span> <span class="pl-c1">undefined</span>   <span class="pl-c">// true</span>
+<span class="pl-c1">null</span> <span class="pl-c1">===</span> <span class="pl-c1">undefined</span>  <span class="pl-c">// false</span></pre></div>
+<ul>
+<li>当使用数学式或其它比较方式 &lt; &gt; &lt;= &gt;= 时，null/undefined 会被转化为数字: null 被转化为 0, undefined 被转化为 NaN</li>
+</ul>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">null</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">0</span> <span class="pl-kos">)</span><span class="pl-kos">;</span>  <span class="pl-c">// (1) false</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">null</span> <span class="pl-c1">==</span> <span class="pl-c1">0</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// (2) false</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">null</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">0</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// (3) true</span></pre></div>
+<p>为什么会出现这种反常结果，这是因为相等性检查 == 和普通比较符 &gt; &lt; &gt;= &lt;= 的代码逻辑是相互独立的。进行值的比较时，null 会被转化为数字，因此它被转化为了 0。这就是为什么（3）中 null &gt;= 0 返回值是 true，（1）中 null &gt; 0 返回值是 false。</p>
+<p>另一方面，undefined 和 null 在相等性检查 == 中不会进行任何的类型转换，它们有自己独立的比较规则，所以除了它们之间互等外，不会等于任何其他的值。这就解释了为什么（2）中 null == 0 会返回 false。</p>
+<blockquote>
+<p>特立独行的 undefined</p>
+</blockquote>
+<ul>
+<li>undefined 不应该被与其他值进行比较</li>
+</ul>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">undefined</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">0</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// false (1)</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">undefined</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">0</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// false (2)</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">undefined</span> <span class="pl-c1">==</span> <span class="pl-c1">0</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// false (3)</span></pre></div>
+<p>(1) 和 (2) 都返回 false 是因为 undefined 在比较中被转换为了 NaN，而 NaN 是一个特殊的数值型值，它与任何值进行比较都会返回 false。<br>
+(3) 返回 false 是因为这是一个相等性检查，而 undefined 只与 null 相等，不会与其他值相等。</p>
+<h3>条件分支： if 和三元运算符</h3>
+<h3>逻辑运算符</h3>
+<blockquote>
+<p>|| 或</p>
+</blockquote>
+<ul>
+<li>
+<p>或运算符返回第一个真值；如果不存在真值，就返回该链的最后一个值</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">1</span> <span class="pl-c1">||</span> <span class="pl-c1">0</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// 1（1 是真值）</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">null</span> <span class="pl-c1">||</span> <span class="pl-c1">1</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// 1（1 是第一个真值）</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">null</span> <span class="pl-c1">||</span> <span class="pl-c1">0</span> <span class="pl-c1">||</span> <span class="pl-c1">1</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// 1（第一个真值）</span>
+<span class="pl-en">alert</span><span class="pl-kos">(</span> <span class="pl-c1">undefined</span> <span class="pl-c1">||</span> <span class="pl-c1">null</span> <span class="pl-c1">||</span> <span class="pl-c1">0</span> <span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// 0（都是假值，返回最后一个值）</span></pre></div>
+</li>
+<li>
+<p>短路求值（short-circuit evaluation)</p>
+<ul>
+<li>如果操作数不仅仅是一个值，而是一个有副作用的表达式，例如变量赋值或函数调用。</li>
+</ul>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c1">true</span> <span class="pl-c1">||</span> <span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s">"not printed"</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-c1">false</span> <span class="pl-c1">||</span> <span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s">"printed"</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
+<p>在第一行中，或运算符 || 在遇到 true 时立即停止运算，所以 alert 没有运行。<br>
+有时，人们利用这个特性，只在左侧的条件为假时才执行命令。</p>
+</li>
+</ul>
+<blockquote>
+<p>&amp;&amp; 与</p>
+</blockquote>
+<ul>
+<li>与运算寻找第一个假值；如果不存在假值，就返回第一个真值。</li>
+</ul>
+<blockquote>
+<p>! 非</p>
 </blockquote></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
