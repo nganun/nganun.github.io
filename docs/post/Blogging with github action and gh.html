@@ -9,7 +9,124 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="Blogging with github action and gh">
+<meta name="description" content="# How to post with gh
+
+> Purpose
+> Record the post method
+
+## List post
+
+```sh
+gh issue list
+```
+
+## New post
+
+```sh
+# This backup file is created by github actions, there I just use the file for edit.
+# -t title, -l label, -F File
+gh issue create -t test -l autoscript -F .\backup\draft.md
+# -b body
+gh issue create -t test -l autoscript -b 'This is the body'
+```
+
+## View post
+
+```sh
+gh issue view 3
+gh issue view 3 --web
+```
+
+## Edit post
+
+```sh
+# modify the title and body of the number 5 issue.
+gh issue edit 5 -t autoscript -b 'short body'
+```
+
+## Delete post
+
+```sh
+gh issue delete 5
+```
+
+## New label
+
+```sh
+gh label create name
+```
+
+## Invoke Actions
+
+```gh
+# Invoke actions with interactive
+gh workflow run
+# Show the action status
+gh run list --workflow=Gmeek.yml
+```
+
+。">
+<meta property="og:title" content="Blogging with github action and gh">
+<meta property="og:description" content="# How to post with gh
+
+> Purpose
+> Record the post method
+
+## List post
+
+```sh
+gh issue list
+```
+
+## New post
+
+```sh
+# This backup file is created by github actions, there I just use the file for edit.
+# -t title, -l label, -F File
+gh issue create -t test -l autoscript -F .\backup\draft.md
+# -b body
+gh issue create -t test -l autoscript -b 'This is the body'
+```
+
+## View post
+
+```sh
+gh issue view 3
+gh issue view 3 --web
+```
+
+## Edit post
+
+```sh
+# modify the title and body of the number 5 issue.
+gh issue edit 5 -t autoscript -b 'short body'
+```
+
+## Delete post
+
+```sh
+gh issue delete 5
+```
+
+## New label
+
+```sh
+gh label create name
+```
+
+## Invoke Actions
+
+```gh
+# Invoke actions with interactive
+gh workflow run
+# Show the action status
+gh run list --workflow=Gmeek.yml
+```
+
+。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nganun.github.io/post/Blogging%20with%20github%20action%20and%20gh.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/92292545?v=4">
 <title>Blogging with github action and gh</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
