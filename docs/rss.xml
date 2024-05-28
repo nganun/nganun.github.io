@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>NGANUN</title><link>https://nganun.github.io</link><description>Less is More</description><copyright>NGANUN</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/92292545?v=4</url><title>avatar</title><link>https://nganun.github.io</link></image><lastBuildDate>Mon, 22 Apr 2024 05:34:07 +0000</lastBuildDate><managingEditor>NGANUN</managingEditor><ttl>60</ttl><webMaster>NGANUN</webMaster><item><title>Cheatsheet - Maximo Map</title><link>https://nganun.github.io/post/Cheatsheet%20-%20Maximo%20Map.html</link><description># Cheatsheet - Maximo Map&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>NGANUN</title><link>https://nganun.github.io</link><description>Less is More</description><copyright>NGANUN</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/92292545?v=4</url><title>avatar</title><link>https://nganun.github.io</link></image><lastBuildDate>Tue, 28 May 2024 16:08:14 +0000</lastBuildDate><managingEditor>NGANUN</managingEditor><ttl>60</ttl><webMaster>NGANUN</webMaster><item><title>Cheatsheet - Maximo Map</title><link>https://nganun.github.io/post/Cheatsheet%20-%20Maximo%20Map.html</link><description># Cheatsheet - Maximo Map&#13;
 &#13;
 References: [Maximo Mange Modules](https://maximosecrets.com/2024/04/16/maximo-manage-modules/)&#13;
 &#13;
@@ -277,11 +277,11 @@ gh run list --workflow=Gmeek.yml&#13;
 - 分号&#13;
   - 错误例子&#13;
   ```js&#13;
-  alert("hello")&#13;
+  alert('hello')&#13;
   [1,2].forEach(alert);&#13;
   ```&#13;
 - 注释&#13;
 &#13;
-### `"use strict"` 模式&#13;
+### `'use strict'` 模式&#13;
 &#13;
-- 请确保`"use strict"` 出现在脚本的最顶部，否则严格模式可能均未启用。</description><guid isPermaLink="true">https://nganun.github.io/post/Reading%20-%20The%20Modern%20JavaScript.html</guid><pubDate>Fri, 08 Mar 2024 04:03:28 +0000</pubDate></item></channel></rss>
+- 请确保`'use strict'` 出现在脚本的最顶部，否则严格模式可能均未启用。</description><guid isPermaLink="true">https://nganun.github.io/post/Reading%20-%20The%20Modern%20JavaScript.html</guid><pubDate>Fri, 08 Mar 2024 04:03:28 +0000</pubDate></item></channel></rss>
